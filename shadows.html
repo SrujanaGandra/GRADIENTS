@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        margin: 0;
+        padding: 0;
+        background-color:gray;
+      }
+        #t1{
+            position: relative;
+            top: 90px;
+            text-align: center;
+
+            font-size: 25px;
+            /* color: #fb0094; */
+            font-weight: bolder;
+            
+        }
+        .block{
+            width: 342px;
+            height: 240px;
+            background-color: burlywood;
+            padding: 20px; 
+            margin-left: 486px; 
+            margin-top: 160px;
+            background-image: conic-gradient(red, yellow, green, blue, black);
+            border-radius: 50%;
+            outline: 2px inset rgb(35, 168, 172);
+            z-index: -2;
+            text-shadow: 5px 15px red;
+            color: rgb(201, 135, 135);
+            
+        }
+        .block:after,.block::before{
+        content: '';
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        background-image: conic-gradient(red, yellow, green, blue, black);
+        border-radius: 50%;
+        background-size: 400%;
+        margin-left: 480px;
+        margin-top: 150px;
+        width:400px;
+        height: 300px;
+        z-index: -2;
+        animation: steam 20s linear infinite;
+        }
+        @keyframes steam {
+        0% {
+          background-position: 0 0;
+        }
+        50% {
+          background-position: 400% 0;
+        }
+        100% {
+          background-position: 0 0;
+        }
+    }
+    .block:after {
+        filter: blur(50px);
+      }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <div id="t1"> <br>GRADIENT</div>
+    </div>
+</body>
+</html>
